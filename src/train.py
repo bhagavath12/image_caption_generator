@@ -9,7 +9,7 @@ from dataloader import create_dataset
 # Config
 embedding_dim = 256
 units = 512
-EPOCHS = 1  # ⏱️ Start with 1 to test, then increase
+EPOCHS = 1  # ⏱ Start with 1 to test, then increase
 CHECKPOINT_PATH = "./checkpoints"
 
 # Load data
@@ -70,7 +70,7 @@ for epoch in range(EPOCHS):
         if batch % 100 == 0:
             print(f"🌀 Epoch {epoch+1} Batch {batch} Loss {batch_loss:.4f}")
 
-    print(f"✅ Epoch {epoch+1} Loss: {total_loss / batch:.6f}")
+    print(f" Epoch {epoch+1} Loss: {total_loss / batch:.6f}")
 
     ckpt_manager.save()
-    print("💾 Checkpoint saved.")
+    print(" Checkpoint saved.")
