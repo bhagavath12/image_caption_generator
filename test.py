@@ -60,5 +60,5 @@ def generate_caption(image_path):
 # --- Run ---
 if __name__ == "__main__":
     caption = generate_caption(IMAGE_PATH)
-    print(f"🖼️ Image: {IMAGE_PATH}")
-    print(f"📝 Caption: {caption}")
+    print(f" Image: {IMAGE_PATH}")
+    print(f" Caption: {caption}")
