@@ -31,4 +31,4 @@ decoder.load_weights('checkpoints/decoder.ckpt')
 # Inference
 features = encoder(img_tensor)
 caption = generate_caption_greedy(features, tokenizer, decoder)
-print("🖼️ Caption:", caption)
+print(" Caption:", caption)
