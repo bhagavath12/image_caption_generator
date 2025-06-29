@@ -37,7 +37,7 @@ def map_func(img_name, cap):
 
     # Check if file exists
     if not os.path.exists(feature_path):
-        print(f"⚠️ Missing file: {feature_path}. Returning zero tensor.")
+        print(f" Missing file: {feature_path}. Returning zero tensor.")
         return np.zeros((2048,), dtype=np.float32), cap
 
     # Load the feature tensor
@@ -49,14 +49,14 @@ def create_dataset():
     df = pd.read_csv(CAPTIONS_FILE)
     tokenizer = load_tokenizer()
 
-    print("🔤 Tokenizing captions...")
+    print(" Tokenizing captions...")
     cap_seqs = tokenizer.texts_to_sequences(df['caption'].values)
     cap_seqs = pad_sequences(cap_seqs, maxlen=MAX_LENGTH, padding='post')
 
-    print("🖼️ Preparing image names...")
+    print(" Preparing image names...")
     img_names = df['image_id'].values  # E.g., 1000268201_693b08cb0e.jpg
 
-    print(f"📦 Dataset size: {len(img_names)}")
+    print(f" Dataset size: {len(img_names)}")
 
     # Build TensorFlow dataset
     dataset = tf.data.Dataset.from_tensor_slices((img_names, cap_seqs))
