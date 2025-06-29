@@ -59,14 +59,14 @@ def evaluate_model(captions_file, encoder, decoder, tokenizer):
             print(f"Evaluated {idx} captions...")
 
     bleu_score = corpus_bleu(actual, predicted)
-    print(f"\n📊 BLEU Score: {bleu_score:.4f}")
+    print(f"\n BLEU Score: {bleu_score:.4f}")
 
 if __name__ == '__main__':
-    print("📤 Loading tokenizer...")
+    print(" Loading tokenizer...")
     tokenizer = load_tokenizer()
 
-    print("📤 Loading models...")
+    print(" Loading models...")
     encoder, decoder = load_models(vocab_size=len(tokenizer.word_index) + 1)
 
-    print("🔍 Running BLEU evaluation...")
+    print(" Running BLEU evaluation...")
     evaluate_model("data/captions_clean.csv", encoder, decoder, tokenizer)
