@@ -1,0 +1,59 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+*.dll
+*.pyd
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Jupyter notebook
+.ipynb_checkpoints/
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE/editor configs
+.vscode/
+.idea/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.bak
+*.orig
+
+# Environment variable files
+.env
+*.env
+
+# Large model/data artifacts
+data/features/
+data/images/
+*.h5
+*.ckpt
+*.pth
+*.pt
+*.tflite
+
+# Tokenizer (optional)
+data/tokenizer.pkl
+
+# Captions (optional)
+data/captions.txt
+
+# Checkpoint folders (optional if regenerating)
+logs/
+checkpoints/
+models/
+
+# GitHub LFS note
+# Files > 100MB should be managed with Git LFS
