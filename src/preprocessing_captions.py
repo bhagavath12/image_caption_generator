@@ -9,6 +9,6 @@ df = pd.read_csv(INPUT_PATH)
 if not df['caption'].iloc[0].startswith("<start>"):
     df['caption'] = df['caption'].apply(lambda x: f"<start> {x.strip()} <end>")
     df.to_csv(OUTPUT_PATH, index=False)
-    print("✅ Captions updated with <start> and <end> tokens.")
+    print(" Captions updated with <start> and <end> tokens.")
 else:
-    print("⚠️ Captions already contain <start> and <end> — no changes made.")
+    print(" Captions already contain <start> and <end> — no changes made.")
