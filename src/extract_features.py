@@ -43,7 +43,7 @@ def main():
         feature_path = os.path.join(FEATURE_DIR, img_name.split('.')[0] + ".npy")
         np.save(feature_path, feature)
 
-    print(f"✅ Features saved in {FEATURE_DIR}")
+    print(f" Features saved in {FEATURE_DIR}")
 
 
 if __name__ == "__main__":
